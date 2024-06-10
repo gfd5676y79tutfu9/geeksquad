@@ -1,0 +1,935 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --primary-text-color: white;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+  --padding-inline-section: 20px;
+  --navbar-color: rgb(18 18 62);
+}
+
+/* utility class start*/
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+/* utility class end*/
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #130d1c;
+  background-image: url(../img/dots.png);
+  background-size: contain;
+  /* min-height: 100%; */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+/* position: absolute; */
+
+/* nav-bar start */
+nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.main-nav {
+  margin-top: 20px;
+  height: auto;
+  min-height: 5rem;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  outline-offset: 0px;
+  -webkit-text-fill-color: inherit;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(
+    rgba(32, 36, 61, 0.4),
+    rgba(32, 36, 61, 0.4)
+  );
+  background-clip: border-box;
+  border: 1px rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  outline: 1px solid rgba(18, 16, 46, 0.5);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.primary-button {
+  background-color: var(--accent-color);
+  font-weight: 500;
+  border-radius: 6px;
+  color: white !important;
+  padding: 10px 20px;
+  box-shadow: 0 0 2px var(--secondary-text-color);
+  transition: 0.2s ease-out;
+  text-align: center;
+  /* font-family: "Merienda", cursive; */
+}
+
+.primary-button:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.secondary-button {
+  border: 0.5px solid var(--secondary-text-color);
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: 0.2s ease-out;
+}
+.secondary-button:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color) !important;
+}
+/* ======================================================================= */
+
+/* nav-child design */
+
+.company-logo img {
+  width: 200px;
+}
+
+.nav-links {
+  flex-basis: 730px;
+}
+
+.nav-links ul {
+  justify-content: end;
+  gap: 25px;
+}
+
+.hover-link {
+  color: rgb(242, 243, 244);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out 0s;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  font-family: "Amaranth", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  justify-content: space-around;
+}
+.hover-link:hover {
+  color: var(--accent-color);
+  transition: 0.2s ease-out;
+}
+
+/* Slider Button */
+.nav-toggle {
+  display: none;
+}
+
+/* nav-bar end */
+
+/* ======================================================================= */
+
+/* Header Banner Start */
+#header-main {
+  padding-top: 100px; /* Replace 60px with the height of your navbar */
+  margin-top: -100px; /* Replace 60px with the height of your navbar */
+}
+.header-main {
+  margin-top: 80px;
+  justify-content: space-around;
+}
+.header-left {
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.header-left p {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 500;
+  font-size: 4em;
+  color: rgba(240, 248, 255, 0.704);
+  text-align: center;
+  /* line-height: 1; */
+}
+.header-left h3 {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 400;
+  font-size: 3.2em;
+  color: rgba(240, 248, 255, 0.66);
+  text-align: center;
+  margin-top: 30px;
+}
+.header-left h2 {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 400;
+  font-size: 6.5em;
+  color: rgb(151, 15, 224);
+  text-align: center;
+}
+.join-us-code {
+  border: 1.8px solid rgb(133, 76, 230);
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  border-radius: 8px;
+  color: rgb(133, 76, 230);
+  cursor: pointer;
+  padding: 8px 30px;
+  font-weight: 400;
+  font-size: 1.4em;
+  transition: all 0.6s ease-in-out 0s;
+  margin-top: 15px;
+  letter-spacing: 1.1px;
+}
+.join-us-code:hover {
+  background-color: rgb(133, 76, 230);
+  color: white;
+  transition: all 1s ease-in-out 0s;
+}
+
+/* .header-right {
+
+} */
+.header-right-img {
+  width: 520px;
+  /* border: 1px solid white; */
+}
+
+/* Header Banner end */
+
+/* ======================================================================= */
+
+/* Experience Start */
+.experience-with {
+  text-align: center;
+  margin-top: 50px;
+}
+.experience-with-lang {
+  display: flex;
+  gap: 6em;
+  padding: 20px;
+  justify-content: center;
+}
+
+.experience-with-lang img {
+  width: 40px;
+  cursor: pointer;
+}
+
+/* Experience end */
+
+/* ======================================================================= */
+
+/* About Start */
+
+/* About CSS Start */
+#about-devstack {
+  padding-top: 100px; /* Replace 60px with the height of your navbar */
+  margin-top: -100px; /* Replace 60px with the height of your navbar */
+}
+.about-heading-left h2 {
+  /* margin-top: 40px; */
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 3.7em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.about-heading-left p {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-size: 1.6em;
+  color: rgb(197, 191, 191);
+  padding: 5px 25px;
+  /* line-height: 1.5; */
+  /* margin-top: 40px; */
+  text-align: center;
+  font-weight: 400;
+  padding: 5 25px;
+}
+.about-heading-left {
+  height: 390px;
+  width: 100%;
+  background-color: #181628;
+  border-radius: 10px;
+  flex-direction: column;
+}
+/* About CSS End */
+
+/* ======================================================================= */
+
+/* Events CSS Start  */
+#event-section {
+  padding-top: 100px; /* Replace 60px with the height of your navbar */
+  margin-top: -100px; /* Replace 60px with the height of your navbar */
+}
+.event-heading {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  padding: 15px;
+}
+
+.events {
+  gap: 30px;
+  margin: 20px;
+  justify-content: center;
+}
+.events-child {
+  height: 330px;
+  width: 350px;
+  background-color: #181628;
+  border-radius: 10px;
+  flex-direction: column;
+  /* gap: 5px; */
+  transition: 1.2s;
+}
+.events-child:hover {
+  transform: scale(1.1);
+}
+
+.events-child img {
+  width: 90%;
+  margin: 20px 18px 4px 18px;
+  border-radius: 3px;
+  border: 1px solid rgba(245, 245, 245, 0.514);
+}
+
+.event-name {
+  font-size: 1.6em;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+}
+.apply-now {
+  border: 1.8px solid rgb(133, 76, 230);
+  text-align: center;
+  /* font-family: "Amaranth", sans-serif; */
+  font-family: "Kanit", sans-serif;
+  border-radius: 8px;
+  color: rgb(133, 76, 230);
+  cursor: pointer;
+  padding: 8px 30px;
+  font-weight: 400;
+  font-size: 1.4em;
+  /* text-decoration: none; */
+  transition: all 0.6s ease-in-out 0s;
+  margin-top: 15px;
+  letter-spacing: 1.1px;
+  width: 80%;
+}
+.apply-now:hover {
+  background-color: rgb(133, 76, 230);
+  color: white;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+/* Events CSS End */
+
+/* .about-heading-dev {
+  align-items: center;
+  align-content: center;
+} */
+
+
+/* ======================================================================= */
+
+/* Skills CSS Start */
+.skills-main {
+  gap: 40px;
+  margin: 40px;
+}
+.skills-child {
+  height: 340px;
+  width: 380px;
+  background-color: #181628;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 5px;
+  transition: 1.2s;
+}
+.skills-child:hover {
+  transform: scale(1.1);
+}
+.skills-heading {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 3.2em;
+  font-weight: 400;
+  margin: 10px;
+}
+.skills-sub-heading {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  /* margin: 10px; */
+  padding: 10px;
+}
+.skills-child img {
+  width: 90%;
+  margin: 20px 18px 4px 18px;
+  border-radius: 3px;
+  border: 1px solid rgba(245, 245, 245, 0.514);
+}
+
+.skills-name {
+  font-size: 1.8em;
+  color: rgba(240, 248, 255, 0.687);
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+}
+
+.skills-open-now {
+  border: 1.8px solid rgb(133, 76, 230);
+  text-align: center;
+  /* font-family: "Amaranth", sans-serif; */
+  font-family: "Kanit", sans-serif;
+  border-radius: 8px;
+  color: rgb(133, 76, 230);
+  cursor: pointer;
+  padding: 8px 30px;
+  font-weight: 400;
+  font-size: 1.4em;
+  /* text-decoration: none; */
+  transition: all 0.6s ease-in-out 0s;
+  margin-top: 15px;
+  letter-spacing: 1.1px;
+  width: 80%;
+}
+.skills-open-now:hover {
+  background-color: rgb(133, 76, 230);
+  color: white;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+/* Skills CSS End */
+
+#DevStack {
+  padding-top: 100px; /* Replace 60px with the height of your navbar */
+  margin-top: -100px; /* Replace 60px with the height of your navbar */
+}
+
+#roadmap-section {
+  padding-top: 100px; /* Replace 60px with the height of your navbar */
+  margin-top: -100px; /* Replace 60px with the height of your navbar */
+}
+
+/* Girls Program CSS Start */
+.roadmap-heading {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.girls-program-heading {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.girlsPro-For-more {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.girls-program-main {
+  gap: 30px;
+  margin-top: 30px;
+  margin: 40px;
+}
+.girls-program-child {
+  height: 350px;
+  width: 380px;
+  background-color: #181628;
+  border-radius: 10px;
+  flex-direction: column;
+  transition: 1.2s;
+}
+
+.girls-program-child:hover {
+  transform: scale(1.1);
+}
+.girls-program-child img {
+  width: 90%;
+  /* margin: 20px 18px 4px 18px; */
+  border-radius: 3px;
+  border: 1px solid rgba(245, 245, 245, 0.936);
+  margin: 18px;
+}
+/* Girls Program CSS End */
+
+/* Boys & Girls Both */
+.playnow-applynow-con {
+  gap: 20px;
+  /* justify-content: space-around; */
+}
+.program-event-name {
+  font-size: 1.7em;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+}
+.programsApply-now {
+  border: 1.8px solid rgb(133, 76, 230);
+  text-align: center;
+  /* font-family: "Amaranth", sans-serif; */
+  font-family: "Kanit", sans-serif;
+  border-radius: 8px;
+  color: rgb(133, 76, 230);
+  cursor: pointer;
+  padding: 8px 20px;
+  font-weight: 400;
+  font-size: 1.4em;
+  /* text-decoration: none; */
+  transition: all 0.6s ease-in-out 0s;
+  margin-top: 15px;
+  letter-spacing: 1.1px;
+}
+.programsApply-now:hover {
+  background-color: rgb(133, 76, 230);
+  color: white;
+  transition: all 0.6s ease-in-out 0s;
+}
+/* Boys Program CSS Start */
+.roadmap-heading {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.boys-program-heading {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 3.5em;
+  font-weight: 400;
+  margin-top: 40px;
+  /* margin-top: 10px; */
+
+  /* padding: 10px; */
+}
+.boysPro-For-more {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2em;
+  font-weight: 400;
+  /* margin-top: 10px; */
+}
+.boys-program-main {
+  gap: 30px;
+  margin-top: 30px;
+  margin: 40px;
+  /* flex-wrap: wrap; */
+}
+.boys-program-child {
+  height: 350px;
+  width: 380px;
+  background-color: #181628;
+  border-radius: 10px;
+  flex-direction: column;
+  /* gap: 5px; */
+  align-content: space-around;
+  transition: 1.2s;
+}
+.boys-program-child:hover {
+  transform: scale(1.1);
+}
+
+.boys-program-child img {
+  width: 90%;
+  /* margin: 20px 18px 4px 18px; */
+  border-radius: 3px;
+  border: 1px solid rgba(245, 245, 245, 0.936);
+  margin: 18px;
+}
+
+/* boys program end */
+/* ======================================================================= */
+/* HackaThon CSS START */
+
+.hackaThon-main {
+  gap: 10px;
+  margin: 30px;
+  justify-content: space-around;
+}
+.hackaThon-heading {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 3.5em;
+  font-weight: 400;
+  /* margin-top: 40px; */
+}
+.hackaThon-child {
+  height: 320px;
+  width: 320px;
+  background-color: #181628;
+  border-radius: 10px;
+  flex-direction: column;
+  /* align-content: space-around; */
+  transition: 1.2s;
+  padding: 5px;
+}
+.hackaThon-child:hover {
+  transform: scale(1.1);
+}
+.hackaThon-child img {
+  width: 90%;
+  /* margin: 20px 18px 4px 18px; */
+  border-radius: 3px;
+  border: 1px solid rgba(245, 245, 245, 0.936);
+  margin: 18px;
+}
+.hackaThon-child-name {
+  font-size: 1.6em;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+}
+.hackaThon-child-Find-now {
+  border: 1.8px solid rgb(133, 76, 230);
+  text-align: center;
+  /* font-family: "Amaranth", sans-serif; */
+  font-family: "Kanit", sans-serif;
+  border-radius: 8px;
+  color: rgb(133, 76, 230);
+  cursor: pointer;
+  padding: 8px 20px;
+  font-weight: 400;
+  font-size: 1.4em;
+  /* text-decoration: none; */
+  transition: all 0.6s ease-in-out 0s;
+  margin-top: 15px;
+  letter-spacing: 1.1px;
+}
+.hackaThon-child-Find-now:hover {
+  background-color: rgb(133, 76, 230);
+  color: white;
+  transition: all 0.6s ease-in-out 0s;
+}
+/* HackaThon CSS END */
+/* ======================================================================= */
+/* Gallery Start */
+.collegeGallery-main {
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  margin: 30px;
+  gap: 30px;
+}
+.collegeGallery-main img {
+  width: 48%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.732);
+}
+
+.gallery-name {
+  font-size: 3.5em;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+  /* line-height: 1.1; */
+  /* font-family: "Amaranth", sans-serif; */
+  letter-spacing: 1.8px;
+}
+/* Gallery End */
+
+/* ======================================================================= */
+
+/* PODCAST CSS Start */
+
+.podcast-main {
+  gap: 40px;
+  margin: 30px;
+  justify-content: space-around;
+}
+.podcast-heading {
+  text-align: center;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 3.5em;
+  font-weight: 400;
+  /* margin-top: 40px; */
+}
+.podcast-child {
+  height: 320px;
+  width: 330px;
+  background-color: #181628;
+  border-radius: 10px;
+  flex-direction: column;
+  align-content: space-around;
+  transition: 1.2s;
+  padding: 5px;
+}
+.podcast-child:hover {
+  transform: scale(1.1);
+}
+
+.podcast-child img {
+  width: 90%;
+  /* margin: 20px 18px 4px 18px; */
+  border-radius: 3px;
+  border: 2px solid rgba(245, 245, 245, 0.936);
+  margin: 18px;
+}
+.podcast-child-name {
+  font-size: 1.6em;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+}
+.podcast-child-play-now {
+  border: 1.8px solid rgb(133, 76, 230);
+  text-align: center;
+  /* font-family: "Amaranth", sans-serif; */
+  font-family: "Kanit", sans-serif;
+  border-radius: 8px;
+  color: rgb(133, 76, 230);
+  cursor: pointer;
+  padding: 8px 20px;
+  font-weight: 400;
+  font-size: 1.4em;
+  /* text-decoration: none; */
+  transition: all 0.6s ease-in-out 0s;
+  margin-top: 15px;
+  letter-spacing: 1.1px;
+  width: 80%;
+}
+.podcast-child-play-now:hover {
+  background-color: rgb(133, 76, 230);
+  color: white;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+/* ======================================================================= */
+/* coordinator Start */
+#coordinator-class {
+  padding-top: 100px; /* Replace 60px with the height of your navbar */
+  margin-top: -100px; /* Replace 60px with the height of your navbar */
+}
+.faculty-coor-main {
+  gap: 30px;
+  /* flex-wrap: wrap; */
+  margin: 30px;
+}
+.faculty-coor-child {
+  height: 330px;
+  width: 350px;
+  background-color: #181628;
+  border-radius: 10px;
+  flex-direction: column;
+  /* gap: 5px; */
+  /* align-content: space-around; */
+  transition: 1.2s;
+  line-height: 1;
+  /* justify-content: space-around; */
+
+  transition: 1s;
+}
+.faculty-coor-child:hover {
+  transform: scale(1.1);
+}
+.faculty-coor-small-child {
+  height: 290px;
+  width: 350px;
+  background-color: #181628;
+  border-radius: 10px;
+  flex-direction: column;
+  /* gap: 5px; */
+  /* align-content: space-around; */
+  transition: 1.2s;
+  line-height: 1;
+  /* justify-content: space-around; */
+
+  transition: 1s;
+}
+.faculty-coor-small-child:hover {
+  transform: scale(1.1);
+}
+.faculty-coor-child img {
+  width: 80%;
+  margin: 20px 18px 4px 18px;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.905);
+}
+
+.faculty-post {
+  font-size: 1.5em;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+  letter-spacing: 1.8px;
+}
+.faculty-name {
+  font-size: 1.5em;
+  color: aliceblue;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+  letter-spacing: 1.8px;
+}
+.coordinator-main {
+  justify-content: space-around;
+  gap: 30px;
+  margin: 25px;
+}
+.coordinator-child {
+  background-color: #181628;
+  width: 300px;
+  height: 330px;
+  border-radius: 8px;
+  border: 1px solid #333333;
+  transition: 1.2s;
+}
+.coordinator-child:hover {
+  transform: scale(1.1);
+}
+.coordinator-child img {
+  width: 85%;
+  border-radius: 7px;
+  /* border-radius: 50%; */
+  margin: 13px 18px;
+  border: 2px solid #f9f8ff;
+}
+.coordinator h2 {
+  color: aliceblue;
+  text-align: center;
+  font-family: "Amaranth", sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  margin: 10px;
+}
+.fa-linkedin {
+  color: #08a5f9;
+}
+.coordinator-child h3 {
+  color: aliceblue;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.coordinator-social-media {
+  gap: 30px;
+  /* justify-content: center; */
+  align-items: center;
+}
+.coordinator-social-media img {
+  border: none !important;
+  width: 80%;
+  /* margin: 0; */
+}
+
+/* coordinator end */
+
+/* ======================================================================= */
+
+/* ======================================================================= */
+
+.footer-content {
+  background-color: #181628;
+  color: aliceblue;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+.footer-content p {
+  font-size: 2em;
+  font-family: "Amaranth", sans-serif;
+  margin: 8px;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a,
+.social-icons a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: "Amaranth", sans-serif;
+  font-weight: 100;
+}
+
+.footer-links a:hover,
+.social-icons a:hover {
+  text-decoration: underline;
+  font-family: "Amaranth", sans-serif;
+}
+
+.social-icons {
+  padding-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons i {
+  font-size: 24px;
+}
